@@ -1,4 +1,4 @@
-const { User, Message } = require('../models/models');
+const { User, Message, adminBlog } = require('../models/models');
 
 const getallnews = async (req, res) => {
     res.send(JSON.stringify(req.data));
@@ -11,7 +11,7 @@ const add_contact = async (req, res) => {
             cellphone : req.body.cellphone
         };
         console.log(user_obj);
-        var UserFrDb = await User.getByEmail(user_obj.email);
+        let UserFrDb = await User.getByEmail(user_obj.email);
         if (!UserFrDb) {
             UserFrDb = await User.addUser(user_obj);
             console.log(`user ${UserFrDb.email} added`);
@@ -23,21 +23,38 @@ const add_contact = async (req, res) => {
             contact_id: UserFrDb.id,
             message: req.body.message
         };
-        const message = await Message.insertMessage(messageObj);
+        const response = await Message.insertMessage(messageObj);
 
-        if (message) {
-            res.send('message added');
+        if (response.code == 201) {
+            res.status(response.code).json({message: "Message send"});
+        }else{
+            throw new Error('Cant insert message');
         }
     }   
     catch (error){
         console.error(error);
-        // Handle other errors appropriately
-        throw error; // Re-throw for potential error handling in caller
+        res.status(400).json({message: error.message})
     }
 };
 
 const login = async (req, res) => {
-    res.send('logged');
+    try{
+        const response = await adminBlog.ValidateUser(req.body);
+        console.log(response);
+        if (response.code == 200) {
+            res.status(response.code).json({message: response.message});
+        }else{
+            throw new Error (response.message); 
+        }
+    }
+    catch (error){
+        console.log(error);
+        if (error.message.includes('not found')) {
+          res.status(404).json({message: error.message});
+        } else {
+          res.status(401).json({message: error.message});
+        }    
+    }
 };
 
 module.exports = {
