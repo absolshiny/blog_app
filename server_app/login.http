@@ -1,0 +1,7 @@
+GET  http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "user_email": "david@example.com",
+    "password": "just_password"
+}
