@@ -1,0 +1,26 @@
+# Run docker compose, docker-compose.yml is supposed to go on the root directory
+
+docker-compose up -d --build
+
+# build a docker container Dockerfile is supposed to go outside the directory of the app
+
+# server_app
+
+docker build -t server_app ./server_app
+
+# client
+docker build -t client_app ./client_app
+
+# db 
+docker build -t db_app ./db
+
+# run a docker container Dockerfile is supposed to go outside the directory of the app
+
+#server 
+docker run -p 3000:3000 server_app
+
+# client
+docker run -p 3007:3000 client_app
+
+# db 
+docker run -p 5432:5432 db_app
