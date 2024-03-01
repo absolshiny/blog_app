@@ -15,7 +15,7 @@ const User = {
     } catch (error) {
       throw error;
     } finally {
-      client.release(); // Release the connection back to the pool
+      client.release();
     }
   },
 
@@ -28,7 +28,7 @@ const User = {
       const user = result.rows[0];
       return user;
     } catch (error) {
-      throw error; // Handle errors appropriately
+      throw error; 
     } finally {
       client.release();
     }
@@ -43,7 +43,7 @@ const User = {
       const user = result.rows[0];
       return user;
     } catch (error) {
-      throw error; // Handle errors appropriately
+      throw error;
     } finally {
       client.release();
     }
