@@ -48,9 +48,13 @@ From blog_app/ folder
 * body-parser:
     Middle ware library is used because express doesnt have it by default anymore, it helps to transorfm the body of the requests in to jsons, this helps me handle that information.
 * cors:
-    cors library is required to handle Cross-Origin Resource Sharing:
-        "Corss an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
-         https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS   "
+    cors library is required to handle Cross-Origin Resource Sharing
+
+        ""CORS, an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port)
+           other than its own from which a browser should permit loading resources.""
+        
+          https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
     so I needed to add this on the server part to allow the information exchange between back end and front end in my computer, this is probably not necessary when run in production
 
 
