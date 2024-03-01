@@ -1,7 +1,7 @@
 .App {
     background-color: #fdc11b;
     text-align: center;
-    height: 100vh; /* 100vh = 100% of viewport height */
+    min-height: 100vh;
   }
   
   .top-right-button {
@@ -13,7 +13,7 @@
   .container {
     background-color: #473703;
     padding: 1.5rem; /* 1.5rem = 1.5em (font size) */
-    height: 6rem; /* Adjust height as needed */
+    height: 6rem; 
     position: relative;
   }
   
@@ -21,16 +21,16 @@
     position: absolute;
     top: 1rem; /* 1rem = 1em (font size) */
     left: 1rem; /* 1rem = 1em (font size) */
-    font-size: 1.875rem; /* Adjust font size as needed */
-    margin-bottom: 1.25rem; /* Adjust margin as needed */
+    font-size: 3rem; 
+    margin-bottom: 1.25rem; 
   }
   
   .text-box {
-    margin-top: 1.25rem; /* Adjust margin as needed */
+    margin-top: 1.25rem; 
     background-color: #473703;
     border: 1px solid #333003;
-    padding: 1rem; /* 1rem = 1em (font size) */
-    width: 60vw; /* 60% of viewport width */
-    margin: 0 auto; /* Center the text box horizontally */
+    padding: 1rem;
+    width: 60vw;
+    margin: 0 auto; 
     position: relative;
   }
