@@ -24,17 +24,24 @@ function App() {
     setShowNews(false);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://api-service:port/news');
-        const data = await response.json();
-        setDataList(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
 
+  async function fetchData() {
+    try {
+      const response = await fetch('http://localhost:3000/news', {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      if (!response.ok) {
+        throw new Error(`API request failed with status ${response.status}`);
+      }
+      const data = await response.json();
+      setDataList(data.news);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+  
+  useEffect(() => {
     fetchData();
   }, []);
 

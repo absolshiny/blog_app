@@ -6,8 +6,8 @@ function NewsShow({ item, onClose }) {
     <div className="news-modal">
       <div className="modal-content">
         <h2>{item.title}</h2>
-        <img src={item.image} alt={item.title} />
-        <p>{item.content}</p>
+        <img src={item.image_url} alt={item.title} />
+        <p>{item.summary}</p>
         <button onClick={onClose}>Close</button>
       </div>
     </div>
