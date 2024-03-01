@@ -1,34 +1,33 @@
 .news-box {
-    background-color: #c9b472;
-    display: flex;
-    flex-direction: row; /* Align elements horizontally */
-    align-items: center; /* Vertically center elements */
-    padding: 1rem;
-    border: 1px solid #ddd;
-    margin-bottom: 1rem;
-    width: 70vw; /* 70% of viewport width */
-    margin: 0 auto; /* Center the container horizontally */
-  }
-  
-  .news-box img {
-    margin-right: 1rem; /* 1rem = 1em (font size) */
-    object-fit: cover;
-    width: 200px;
-    height: 150px;
-  }
+  background-color: #c9b472;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  width: 70vw;
+  margin: 0 auto;
+}
 
-  .news-content {
-    padding: 1rem; /* 1rem = 1em (font size) */
-    font-size: 1rem; /* 1rem = 1em (font size) */
-    color: #333;
-    flex: 1; /* Allow content to fill remaining space */
-  }
-  
-  .news-box.left {
-    margin-left: 25vw; /* Adjust left margin as needed */
-  }
+.news-box img {
+  margin-right: 1rem;
+  object-fit: cover;
+  width: 200px;
+  height: 150px;
+}
 
-  .news-box.right {
-    margin-right: 25vw; /* Adjust right margin as needed */
-  }
+.news-content {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+  flex: 1;
+}
 
+.news-box.left {
+  margin-left: 25vw;
+}
+
+.news-box.right {
+  margin-right: 25vw;
+}

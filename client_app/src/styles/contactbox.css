@@ -4,43 +4,43 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex; /* Center the content vertically and horizontally */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; 
     justify-content: center;
     align-items: center;
-    z-index: 10; /* Ensure the modal is above other elements */
+    z-index: 10; 
   }
   
   .contact-content {
-    background-color: #fff; /* Content background color */
-    padding: 20px; /* Padding for content */
-    border-radius: 5px; /* Rounded corners */
-    max-width: 400px; /* Optional: Set a maximum width */
-    margin: 0 auto; /* Center the content horizontally */
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 5px; 
+    max-width: 400px; 
+    margin: 0 auto; 
     position: relative;
   }
   
   h2 {
-    margin-bottom: 15px; /* Add some space below the heading */
-    text-align: center; /* Center the text of the heading */
+    margin-bottom: 15px; 
+    text-align: center; 
   }
   
   label {
-    display: block; /* Display labels on their own line */
-    margin-bottom: 5px; /* Add some space below labels */
+    display: block;
+    margin-bottom: 5px;
   }
   
   input,
   textarea {
-    width: 100%; /* Make input fields and textarea full width */
-    padding: 5px; /* Add padding to input fields and textarea */
-    border: 1px solid #ccc; /* Add a border to input fields and textarea */
-    border-radius: 3px; /* Add rounded corners to input fields and textarea */
-    margin-bottom: 10px; /* Add some space below input fields and textarea */
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
   }
   
   textarea {
-    height: 100px; /* Set a height for the textarea */
+    height: 100px;
   }
   
   .close-button {
@@ -48,9 +48,9 @@
     top: 0.5rem;
     right: 0.5rem;
     cursor: pointer;
-    background-color: transparent; /* Remove default button background */
-    border: none; /* Remove default button border */
-    font-size: 1.2rem; /* Increase font size for close button */
-    font-weight: bold; /* Make close button text bold */
-    color: #000; /* Set text color for close button */
-  }
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+  }  

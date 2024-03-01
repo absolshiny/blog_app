@@ -1,56 +1,56 @@
 .news-modal {
-    position: fixed; /* Make the modal fixed position */
-    top: 0; /* Position it at the top of the viewport */
-    left: 0; /* Position it at the left edge of the viewport */
-    width: 100%; /* Make it occupy the entire width of the viewport */
-    height: 100%; /* Make it occupy the entire height of the viewport */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex; /* Center the modal content horizontally */
-    justify-content: center;
-    align-items: center;
-    z-index: 10; /* Set a high z-index to make sure it stays above other content */
-  }
-  
-  .modal-content {
-    background-color: #fff; /* Content background color */
-    padding: 20px; /* Add some padding inside the modal */
-    border-radius: 5px; /* Add rounded corners */
-    max-width: 500px; /* Set a maximum width for the content */
-    position: relative; /* Allow absolute positioning for the close button */
-    display: flex; /* Make the content area a flex container */
-    flex-direction: column; /* Arrange elements vertically */
-    align-items: center; /* Center elements horizontally */
-  }
-  
-  .modal-content h2 {
-    margin-bottom: 15px; /* Add some space below the heading */
-    height: 150px;
-    text-align: center; /* Center the text of the heading */
-    order: 1
-  }
-  
-  .modal-content img {
-    width: 100%; /* Make the image take up the full width of the content area */
-    margin-bottom: 10px; /* Add some space below the image */
-    height: 200px;
-    object-fit: cover;
-    order: 2
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
 
-  .modal-content p {
-    margin-bottom: 15px; /* Add some space below the paragraph */
-    order: 3
-  }
-  
-  .close-button {
-    position: absolute; /* Make the button absolute within the modal content */
-    top: 10px; /* Position it at the top right corner */
-    right: 10px; /* Position it at the right edge */
-    cursor: pointer; /* Indicate that it's clickable */
-    background-color: transparent; /* Remove default button background */
-    border: none; /* Remove default button border */
-    font-size: 1.2rem; /* Increase font size for close button */
-    font-weight: bold; /* Make close button text bold */
-    color: #000; /* Set text color for close button */
-    order: 4
-  }
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  height: 150px;
+  text-align: center;
+  order: 1;
+}
+
+.modal-content img {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 200px;
+  object-fit: cover;
+  order: 2;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  order: 3;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  order: 4;
+}
