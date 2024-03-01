@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/app.css';
 import NewsList from './components/newsList';
 import ContactBox from './components/ContactBox';
@@ -7,6 +7,7 @@ function App() {
   const [showContactBox, setShowContactBox] = useState(false);
   const [selectedNewsItem, setSelectedNewsItem] = useState(null);
   const [showNews, setShowNews] = useState(false);
+  const [dataList, setDataList] = useState([]);
 
   const toggleContactBox = () => {
     setShowContactBox(!showContactBox);
@@ -23,10 +24,19 @@ function App() {
     setShowNews(false);
   };
 
-  const dataList = [
-    { title: "amigo1", image: 'https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', content: 'Content 1' },
-    { title: "amigo2", image: 'https://www.thoughtco.com/thmb/BVnoDc9J_65SCnuAQ9fvciTSyLQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/splashing-165192_1280-7879d2914dfb4e5d8dbf2e943669bd92.jpg', content: 'Content 2' },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://api-service:port/news');
+        const data = await response.json();
+        setDataList(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className= "App">
