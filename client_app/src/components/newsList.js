@@ -8,10 +8,9 @@ function NewsList({ data, onItemClick }) {
       {data.map((item, index) => (
         <NewsBox
           key={index}
-          image={item.image}
-          content={item.content}
+          item = {item}
           isLeft={index % 2 === 0} // Alternate left and right positioning
-          onClick={() => onItemClick(item)} 
+          onItemClick= {onItemClick}
         />
       ))}
     </div>
