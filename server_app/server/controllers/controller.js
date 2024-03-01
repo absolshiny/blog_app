@@ -1,7 +1,7 @@
 const { User, Message, adminBlog } = require('../models/models');
 
 const getallnews = async (req, res) => {
-    res.send(JSON.stringify(req.data));
+    res.json({news : req.data});
 };
 
 const add_contact = async (req, res) => {
