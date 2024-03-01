@@ -5,9 +5,25 @@ function ContactBox({ isVisible, onClose }) {
 
     const [formData, setFormData] = useState({
         email: '',
-        phone: '',
+        cellphone: '',
         message: ''
     });
+
+    async function sendContacts(contact) {
+        try {
+          const response = await fetch('http://localhost:3000/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(contact)
+          });
+          if (!response.ok) {
+            throw new Error(`API request failed with status ${response.status}`);
+          }
+          const data = await response.json();
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      }
 
     const handleChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -15,8 +31,9 @@ function ContactBox({ isVisible, onClose }) {
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevent default form submission behavior
-        console.log(formData); // Log form data to console
-        setFormData({ email: '', phone: '', message: '' }); // Clear form after submission
+        console.log(formData);
+        sendContacts(formData);
+        setFormData({ email: '', cellphone: '00-0000-0000', message: '' }); // Clear form after submission
     };
     
     return (
@@ -36,11 +53,13 @@ function ContactBox({ isVisible, onClose }) {
                 />
                 <label htmlFor="phone">Phone:</label>
                 <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
+                    type="tel"
+                    id="phone"
+                    name="cellphone"
+                    value={formData.cellphone}
+                    onChange={handleChange}
+                    required
+                    pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}"
                 />
                 <label htmlFor="message">Message:</label>
                 <textarea
