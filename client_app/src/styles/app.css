@@ -1,43 +1,36 @@
 .App {
-    background-color:#fdc11b;
+    background-color: #fdc11b;
     text-align: center;
-    height: 100vh
+    height: 100vh; /* 100vh = 100% of viewport height */
   }
   
   .top-right-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1rem; /* 1rem = 1em (font size) */
+    right: 1rem; /* 1rem = 1em (font size) */
   }
+  
   .container {
-    background-color:#473703; /* Example light gray background */
-    padding: 20px;
-    height: 90px;
+    background-color: #473703;
+    padding: 1.5rem; /* 1.5rem = 1.5em (font size) */
+    height: 6rem; /* Adjust height as needed */
     position: relative;
   }
   
   .title {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 30px; /* Make the title larger */
-    margin-bottom: 20px; 
+    top: 1rem; /* 1rem = 1em (font size) */
+    left: 1rem; /* 1rem = 1em (font size) */
+    font-size: 1.875rem; /* Adjust font size as needed */
+    margin-bottom: 1.25rem; /* Adjust margin as needed */
   }
   
   .text-box {
-    margin-top: 20px;
-    background-color:#473703;
+    margin-top: 1.25rem; /* Adjust margin as needed */
+    background-color: #473703;
     border: 1px solid #333003;
-    padding: 15px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto; /* Center the text box */
+    padding: 1rem; /* 1rem = 1em (font size) */
+    width: 60vw; /* 60% of viewport width */
+    margin: 0 auto; /* Center the text box horizontally */
     position: relative;
-  }
-  
-  .close-button {
-    position: absolute; /* Position absolutely within the text box */
-    top: 5px;           /* Adjust for desired vertical position */
-    right: 5px;         /* Adjust for desired horizontal position */
-    cursor: pointer; /* Indicate clickable behavior */
   }
