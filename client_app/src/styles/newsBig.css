@@ -17,23 +17,29 @@
     border-radius: 5px; /* Add rounded corners */
     max-width: 500px; /* Set a maximum width for the content */
     position: relative; /* Allow absolute positioning for the close button */
+    display: flex; /* Make the content area a flex container */
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center elements horizontally */
   }
   
   .modal-content h2 {
     margin-bottom: 15px; /* Add some space below the heading */
     height: 150px;
     text-align: center; /* Center the text of the heading */
+    order: 1
   }
   
   .modal-content img {
     width: 100%; /* Make the image take up the full width of the content area */
     margin-bottom: 10px; /* Add some space below the image */
-    height: 600px;
+    height: 200px;
     object-fit: cover;
+    order: 2
   }
 
   .modal-content p {
     margin-bottom: 15px; /* Add some space below the paragraph */
+    order: 3
   }
   
   .close-button {
@@ -46,4 +52,5 @@
     font-size: 1.2rem; /* Increase font size for close button */
     font-weight: bold; /* Make close button text bold */
     color: #000; /* Set text color for close button */
+    order: 4
   }
