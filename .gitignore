@@ -4,3 +4,4 @@ server_app/login.http
 commands
 server_app/news.http
 commands
+commands
