@@ -1,0 +1,56 @@
+.contact-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Center the content vertically and horizontally */
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure the modal is above other elements */
+  }
+  
+  .contact-content {
+    background-color: #fff; /* Content background color */
+    padding: 20px; /* Padding for content */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 400px; /* Optional: Set a maximum width */
+    margin: 0 auto; /* Center the content horizontally */
+    position: relative;
+  }
+  
+  h2 {
+    margin-bottom: 15px; /* Add some space below the heading */
+    text-align: center; /* Center the text of the heading */
+  }
+  
+  label {
+    display: block; /* Display labels on their own line */
+    margin-bottom: 5px; /* Add some space below labels */
+  }
+  
+  input,
+  textarea {
+    width: 100%; /* Make input fields and textarea full width */
+    padding: 5px; /* Add padding to input fields and textarea */
+    border: 1px solid #ccc; /* Add a border to input fields and textarea */
+    border-radius: 3px; /* Add rounded corners to input fields and textarea */
+    margin-bottom: 10px; /* Add some space below input fields and textarea */
+  }
+  
+  textarea {
+    height: 100px; /* Set a height for the textarea */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    background-color: transparent; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 1.2rem; /* Increase font size for close button */
+    font-weight: bold; /* Make close button text bold */
+    color: #000; /* Set text color for close button */
+  }
