@@ -18,10 +18,11 @@ services:
       - "5432:5432"
     networks:
       - blog_network
-  # User interface
+
+  # User interface service
   blogg:
     build: ./client_app
     ports:
-      - "80:3000"
+      - "8080:8080"
     networks:
       - blog_network
