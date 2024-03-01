@@ -1,0 +1,49 @@
+.news-modal {
+    position: fixed; /* Make the modal fixed position */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Position it at the left edge of the viewport */
+    width: 100%; /* Make it occupy the entire width of the viewport */
+    height: 100%; /* Make it occupy the entire height of the viewport */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Center the modal content horizontally */
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Set a high z-index to make sure it stays above other content */
+  }
+  
+  .modal-content {
+    background-color: #fff; /* Content background color */
+    padding: 20px; /* Add some padding inside the modal */
+    border-radius: 5px; /* Add rounded corners */
+    max-width: 500px; /* Set a maximum width for the content */
+    position: relative; /* Allow absolute positioning for the close button */
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 15px; /* Add some space below the heading */
+    height: 150px;
+    text-align: center; /* Center the text of the heading */
+  }
+  
+  .modal-content img {
+    width: 100%; /* Make the image take up the full width of the content area */
+    margin-bottom: 10px; /* Add some space below the image */
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .modal-content p {
+    margin-bottom: 15px; /* Add some space below the paragraph */
+  }
+  
+  .close-button {
+    position: absolute; /* Make the button absolute within the modal content */
+    top: 10px; /* Position it at the top right corner */
+    right: 10px; /* Position it at the right edge */
+    cursor: pointer; /* Indicate that it's clickable */
+    background-color: transparent; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 1.2rem; /* Increase font size for close button */
+    font-weight: bold; /* Make close button text bold */
+    color: #000; /* Set text color for close button */
+  }
