@@ -1,0 +1,56 @@
+.contact-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+  }
+  
+  .contact-content {
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 5px; 
+    max-width: 400px; 
+    margin: 0 auto; 
+    position: relative;
+  }
+  
+  h2 {
+    margin-bottom: 15px; 
+    text-align: center; 
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+  }  

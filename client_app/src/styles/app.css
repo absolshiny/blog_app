@@ -1,0 +1,36 @@
+.App {
+    background-color: #fdc11b;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .top-right-button {
+    position: absolute;
+    top: 1rem; /* 1rem = 1em (font size) */
+    right: 1rem; /* 1rem = 1em (font size) */
+  }
+  
+  .container {
+    background-color: #473703;
+    padding: 1.5rem; /* 1.5rem = 1.5em (font size) */
+    height: 6rem; 
+    position: relative;
+  }
+  
+  .title {
+    position: absolute;
+    top: 1rem; /* 1rem = 1em (font size) */
+    left: 1rem; /* 1rem = 1em (font size) */
+    font-size: 3rem; 
+    margin-bottom: 1.25rem; 
+  }
+  
+  .text-box {
+    margin-top: 1.25rem; 
+    background-color: #473703;
+    border: 1px solid #333003;
+    padding: 1rem;
+    width: 60vw;
+    margin: 0 auto; 
+    position: relative;
+  }

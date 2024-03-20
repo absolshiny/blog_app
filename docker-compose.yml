@@ -1,0 +1,28 @@
+version: "3.8"
+
+networks:
+  blog_network:  
+services:
+  # application service
+  server_app:
+    build: ./server_app
+    ports:
+      - "3000:3000"
+    networks:
+      - blog_network
+
+  # database service
+  db:
+    build: ./db
+    ports:
+      - "5432:5432"
+    networks:
+      - blog_network
+
+  # User interface service
+  blogg:
+    build: ./client_app
+    ports:
+      - "8080:8080"
+    networks:
+      - blog_network
